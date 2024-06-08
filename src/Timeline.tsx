@@ -18,7 +18,7 @@ interface Event {
 
 const Timeline: React.FC = () => {
   const [events, setEvents] = useState<Event[]>([]);
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,6 +53,7 @@ const Timeline: React.FC = () => {
   return (
     <div className="timeline">
       {events.map((event, index) => (
+          <>
         <div
           key={event.report_date}
           className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'} ${index === activeIndex ? 'active' : ''}`}
@@ -69,6 +70,8 @@ const Timeline: React.FC = () => {
             <p>Press Killed: {event.ext_press_killed_cum ?? 'N/A'}</p>
           </div>
         </div>
+          <div className="timeline-separator" />
+          </>
       ))}
     </div>
   );
