@@ -87,11 +87,13 @@ body {
     .timeline-item.left {
       justify-self: flex-start;
       clear: both;
+      margin-left: -12px;
     }
   
     .timeline-item.right {
       justify-self: flex-end;
       clear: both;
+      margin-right: -12px;
     }
   }
   
