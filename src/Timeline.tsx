@@ -70,7 +70,7 @@ const Timeline: React.FC = () => {
             <p>Press Killed: {event.ext_press_killed_cum ?? 'N/A'}</p>
           </div>
         </div>
-          <div className="timeline-separator" />
+        { index !== events.length - 1 && <div className="timeline-separator" /> }
           </>
       ))}
     </div>
