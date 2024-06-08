@@ -24,12 +24,19 @@ body {
     transition: background-color 0.3s ease;
 }
 
+  .timeline-content > h3 {
+    color: #c10101;
+    font-size: 1.5em;
+    margin: 0;
+  }
+
 .timeline-separator {
     content: '';
     width: 6px;
     background-color: #009688;
     justify-self: center;
     height: 30px;
+    border-radius: 4px;
 }
 
 .timeline-item.active.left {

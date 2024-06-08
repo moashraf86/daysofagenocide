@@ -14,6 +14,7 @@ interface Event {
   ext_civdef_killed_cum?: number;
   ext_med_killed_cum?: number;
   ext_press_killed_cum?: number;
+  major_event?: string;
 }
 
 const Timeline: React.FC = () => {
@@ -60,6 +61,7 @@ const Timeline: React.FC = () => {
         >
           <div className="timeline-content">
             <h2>{event.report_date}</h2>
+            {event.major_event && <h3>{event.major_event}</h3>}
             <p>Killed: {event.ext_killed ?? 'N/A'}</p>
             <p>Injured: {event.ext_injured ?? 'N/A'}</p>
             <p>Total Killed: {event.ext_killed_cum ?? 'N/A'}</p>
