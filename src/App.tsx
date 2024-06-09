@@ -1,7 +1,6 @@
 // src/App.tsx
 import React from 'react';
 import Timeline from './Timeline';
-import './App.css';
 
 const App: React.FC = () => {
   return (
