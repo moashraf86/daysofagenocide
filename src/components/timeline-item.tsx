@@ -7,14 +7,16 @@ interface Props {
     direction: 'left' | 'right';
     active: boolean;
     withSeparator: boolean;
+    setRef: (node: HTMLDivElement) => void;
 }
 
-export const TimelineItem: React.FC<Props> = ({event, direction, active, withSeparator}: Props) => {
+export const TimelineItem: React.FC<Props> = ({event, direction, active, withSeparator, setRef}: Props) => {
     return (
         <>
             <div
                 key={event.report_date}
                 className={`timeline-item ${direction} ${active ? 'active' : ''}`}
+                ref={setRef}
             >
                 <div className="timeline-content">
                     <h2>{event.report_date}</h2>
