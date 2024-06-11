@@ -6,11 +6,10 @@ interface Props {
     event: CasualtyEvent;
     direction: 'left' | 'right';
     active: boolean;
-    withSeparator: boolean;
     setRef: (node: HTMLDivElement) => void;
 }
 
-export const TimelineItem: React.FC<Props> = ({event, direction, active, withSeparator, setRef}: Props) => {
+export const TimelineItem: React.FC<Props> = ({event, direction, active, setRef}: Props) => {
     return (
         <>
             <div
@@ -31,7 +30,6 @@ export const TimelineItem: React.FC<Props> = ({event, direction, active, withSep
                     <p>Press Killed: {event.ext_press_killed_cum ?? 'N/A'}</p>
                 </div>
             </div>
-            {withSeparator && <div className="timeline-separator"/>}
         </>
     )
 }

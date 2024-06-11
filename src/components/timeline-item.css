@@ -9,15 +9,6 @@
     border: 4px solid transparent;
 }
 
-.timeline-separator {
-    content: '';
-    width: 4px;
-    background-color: #009688;
-    justify-self: center;
-    height: 30px;
-    border-radius: 4px;
-}
-
 .timeline-item.active {
     background-color: #1d1d20;
     border-color: #009688;

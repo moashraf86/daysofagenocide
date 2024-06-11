@@ -24,7 +24,6 @@ const Timeline: React.FC = () => {
           direction={index % 2 === 0 ? "left" : "right"}
           setRef={(node) => (refs.current[index] = node)}
           active={activeIndex === index}
-          withSeparator={index !== events.length - 1}
         />
       ))}
     </div>
