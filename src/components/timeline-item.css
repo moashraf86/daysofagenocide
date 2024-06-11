@@ -6,7 +6,7 @@
     width: 90%;
     clear: both;
     transition: background-color 0.3s ease;
-    border: 4px solid transparent;
+    border: 2px solid transparent;
 }
 
 .timeline-item.active {
@@ -102,6 +102,6 @@
 
     .timeline-item.left .timeline-content::before,
     .timeline-item.right .timeline-content::before {
-        left: -47px;
+        left: -45px;
     }
 }
